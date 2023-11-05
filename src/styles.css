@@ -1,1 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background: #F4F7FC;
+  /* background: #a6b3ca; */
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(220, 13%, 95%) !important;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #9aa5ba !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #80868B !important;
+}
+
+.p-datatable .p-datatable-thead>tr>th {
+  padding: 10px 5px 10px 5px !important;
+  color: #737272;
+}
+
+.p-datatable .p-datatable-tbody>tr>td {
+  padding: 12px 10px 12px 10px !important;
+  color: #737272;
+}
+
+.p-datatable .p-datatable-thead>tr>th {
+  background: #fff !important;
+}
+
+
+.p-datatable-wrapper {
+  overflow-y: auto !important;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer/Edge */
+}
+
+.p-datatable-scrollable {
+  overflow-x: auto !important;
+}
+
+.p-datatable-wrapper::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.p-datatable-wrapper::-webkit-scrollbar-track {
+  display: none;
+}

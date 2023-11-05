@@ -1,0 +1,135 @@
+<div class="container-fluid">
+  <div class="row mt-4">
+    <div class="col-sm-12 col-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+      <div class="card-body rounded-3 white_shd2 white_shd2Height">
+        <div class="row">
+          <h5 class="ps-0 mb-4">Recent Order</h5><b></b>
+          <div class="col-md-12">
+            <p-table [value]="recentOrderArr" [rows]="5" [scrollable]="true" scrollHeight="360px"
+              [tableStyle]="{'min-width': '50rem'}" [responsive]="true">
+              <ng-template pTemplate="header">
+                <tr>
+                  <th [ngStyle]="{'width':'2%'}">#</th>
+                  <th>Customer</th>
+                  <th>Products</th>
+                  <th>Delivery Date</th>
+                  <th>Status</th>
+                  <th>Tracking No#</th>
+                  <th>Shipping</th>
+                  <th></th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-item let-sr="rowIndex">
+                <tr>
+                  <th class="text-center sr">{{(sr + 1) | number: '2.0'}}</th>
+                  <td>{{item.name}}</td>
+                  <td>{{item.product}}</td>
+                  <td>{{item.delivery_date | date: 'dd MMM, YYYY'}}</td>
+                  <td>
+                    <span class="badge text-center text-light d-flex justify-content-center me-3"
+                      [ngClass]="item.status == 'Paid'?'bg-success':'' || item.status == 'Failed'?'bg-danger':'' || item.status == 'Pending'?'bg-secondary':''">{{item.status}}</span>
+                  </td>
+                  <td>{{'#' + item.tracking_no}}</td>
+                  <td>{{item.shipping == true? 'Yes':'No'}}</td>
+                  <td><i class="fa fa-close"></i></td>
+                </tr>
+              </ng-template>
+            </p-table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 mt-md-4 mt-lg-0">
+      <div class="card-body rounded-3 white_shd2 white_shd2Height">
+        <div class="row">
+          <h5 class="ps-0 mb-4">New User Registrations</h5><b></b>
+          <div class="col-md-12">
+            <p-table [value]="newUsersArr" [rows]="5" [scrollable]="true" scrollHeight="360px" [responsive]="true">
+              <ng-template pTemplate="body" let-item let-sr="rowIndex">
+                <tr>
+                  <td [ngStyle]="{'width':'10%'}"><img [src]="item.picture" class="userImg" alt="..."></td>
+                  <td [ngStyle]="{'width':'40%'}">
+
+                    <p class="mb-0 fw-bold">{{item.name}}</p> <span>{{item.country}}</span>
+                  </td>
+                  <td [ngStyle]="{'width':'40%'}">
+                    <div class="row">
+                      <div class="col-md-9 pe-0">
+                        <div class="progress">
+                          <div class="progress-bar"
+                            [ngClass]="{'progressMore50': item.progress > 50, 'progressLess50': item.progress <= 50 , 'progressLess40': item.progress <= 40, 'progressLess30': item.progress <= 30, 'progressLess20': item.progress < 20}"
+                            [style.width.%]="item.progress" role="progressbar"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="progress-value">
+                          {{ item.progress }}%
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button class="btn btn-sm" [ngClass]="isBtnSelected[sr]? 'moreBtnSelect':'moreBtn'"
+                      (click)="selectButton(sr)">More</button>
+                  </td>
+                </tr>
+              </ng-template>
+            </p-table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4 mb-5">
+    <div class="col-sm-12 col-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+      <div class="card-body rounded-3 white_shd3 white_shd3Height">
+        <div class="row">
+          <div class="col-md-8">
+            <h5 class="ps-0 mb-4">Sales Statistics</h5><b></b>
+          </div>
+          <div class="col-md-4">
+            <select class="form-select">
+              <option value="">All Days</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div>
+              <canvas id="lineChart" class="w-100 h-100" responsive="true"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-12 col-md-7 col-lg-4 col-xl-4 col-xxl-4 mt-3 mt-md-3 mt-lg-0">
+      <div class="card-body rounded-3 white_shd3 white_shd3Height">
+        <div class="row">
+          <div class="col-md-8">
+            <h5 class="ps-0 mb-4">Balance Overview</h5><b></b>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-12 col-lg-12 col-xl-12 col-xxl-12">
+            <canvas id="barChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-12 col-md-5 col-lg-4 col-xl-4 col-xxl-4 mt-3 mt-md-3 mt-lg-0">
+      <div class="card-body rounded-3 white_shd3 white_shd3Height">
+        <div class="row">
+          <div class="col-md-8">
+            <h5 class="ps-0 mb-4">Top Products</h5><b></b>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+            <canvas id="doughnut"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

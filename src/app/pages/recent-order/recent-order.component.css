@@ -1,0 +1,110 @@
+.white_shd2 h5 {
+  font-size: 1.143rem;
+  margin: 10px 0px 0px 20px;
+  line-height: 1.66 !important;
+  color: #737272;
+  font-weight: bold;
+}
+
+.sr {
+  color: #737272;
+  font-weight: 400;
+}
+
+.white_shd2 span {
+  display: flex;
+  color: #79767E;
+  font-size: 0.75rem;
+  line-height: 1.66 !important;
+}
+
+.white_shd2 {
+  background: #fff;
+  padding: 25px;
+}
+
+.white_shd2Height {
+  max-height: 500px !important;
+}
+
+.badge {
+  padding: 2px 2px;
+}
+
+.white_shd2 i {
+  cursor: pointer;
+}
+
+.userImg {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+}
+
+.progress {
+  height: 4px;
+  margin-top: 7px;
+}
+
+.progress-value {
+  font-size: 11px;
+}
+
+.moreBtn {
+  background: #e6e3e7;
+  color: #827f83;
+}
+
+.moreBtnSelect {
+  background: #8B9AE6;
+  color: #fff;
+}
+
+.progressMore50 {
+  background: #8B9AE6 !important;
+}
+
+.progressLess50 {
+  background: #69D7B2 !important;
+}
+
+.progressLess40 {
+  background: rgb(43, 9, 75) !important;
+}
+
+.progressLess30 {
+  background: rgb(243, 135, 19) !important;
+}
+
+.progressLess20 {
+  background: rgb(254, 20, 20) !important;
+}
+
+.white_shd3 {
+  background: #fff;
+  padding: 25px;
+}
+
+.white_shd3Height {
+  height: 410px !important;
+}
+
+.white_shd3 h5 {
+  font-size: 1.143rem;
+  margin: 10px 0px 0px 20px;
+  line-height: 1.66 !important;
+  color: #737272;
+  font-weight: bold;
+}
+
+.white_shd3 select {
+  color: #737272;
+  border: none;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+#doughnut {
+  max-width: 400px;
+  max-height: 250px;
+}

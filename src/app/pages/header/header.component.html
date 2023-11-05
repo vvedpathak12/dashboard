@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand navbar-dark bg-white ps-0 pe-2 py-0">
+  <div class="side-nav-button me-3 text-light" (click)="sideBarToggle()">
+    <i class="fa fa-bars"></i>
+  </div>
+
+  <!-- <a href=""></a> -->
+
+  <div class="navbar-collapse">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown">
+        <span class="p-input-icon-left">
+          <i class="fa fa-search"></i>
+          <input type="text" class="form-control" pInputText placeholder="Search" />
+        </span>
+      </li>
+    </ul>
+    <div class="dropdown">
+      <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown"
+        aria-expanded="false">Eng</button>
+      <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+        <li>
+          <a class="dropdown-item">ENG</a>
+        </li>
+        <li>
+          <a class="dropdown-item">GER</a>
+        </li>
+      </ul>
+
+    </div>
+    <img src="assets/images/Chat_icon.png" alt="..." class="notifications mx-3">
+    <img src="assets/images/notificationicon.png" alt="..." class="notifications">
+    <div class="dropdown">
+      <button class="btn btn-light dropdown-toggle ms-2 me-md-4 me-lg-5 me-xl-5" type="button" id="userDropdown"
+        data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="assets/images/man3.jpg" alt="User" class="user-profile-picture">
+        Camille Stevenson
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="userDropdown">
+        <li>
+          <a class="dropdown-item">Profile</a>
+        </li>
+        <li>
+          <a class="dropdown-item">Settings</a>
+        </li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li>
+          <a class="dropdown-item">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

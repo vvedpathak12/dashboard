@@ -1,0 +1,71 @@
+nav{
+  height: 100%;
+}
+
+.side-nav-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: #506DE2;
+  padding: 20px 20px;
+}
+
+.side-nav-button:hover {
+  cursor: pointer;
+  background: #1534b2;
+  transition: 0.5s ease;
+}
+
+input {
+  padding: 9px;
+  border: none;
+  font-size: 14px
+}
+
+.fa-search {
+  color: #CCD1D9 !important;
+}
+
+.notifications {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.user-profile-picture {
+  width: 32px;
+  height: 32px;
+  border-radius: 10%;
+  margin-right: 10px;
+}
+
+#userDropdown {
+  color: #5f6165;
+  border: none;
+  background: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+#userDropdown:hover {
+  color: #5f6165;
+  background: #fff;
+  border: none;
+}
+
+#languageDropdown {
+  color: #5f6165;
+  border: none;
+  background: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#languageDropdown:hover {
+  color: #5f6165;
+  background: #fff;
+  border: none;
+}
